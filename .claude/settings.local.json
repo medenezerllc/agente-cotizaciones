@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git ls-remote *)",
+      "Bash(echo \"---EXIT: $?---\")",
+      "Bash(rm -rf /tmp/crear-agente-inspect && echo \"limpieza ok\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(node tests/test-cerebro.mjs)",
+      "Bash(node -e ' *)",
+      "Bash(node tests/test-email.mjs)",
+      "Read(//Applications/Google Chrome.app/Contents/MacOS/**)",
+      "Read(//Applications/Chromium.app/Contents/MacOS/**)",
+      "Read(//Applications/Microsoft Edge.app/Contents/MacOS/**)",
+      "Bash(npm view *)",
+      "Bash(npm install *)",
+      "Bash(npx wrangler *)",
+      "Bash(curl -s -o /dev/null -w 'HTTP %{http_code}\\\\n' https://agente-cotizaciones.medenezerllc.workers.dev/)",
+      "Bash(curl -s -o /dev/null -w 'HTTP %{http_code}\\\\n' https://agente-cotizaciones.medenezerllc.workers.dev/dashboard)",
+      "Bash(curl -s -o /dev/null -w 'HTTP %{http_code}\\\\n' -u giancarlo:MiClaveSegura2026! https://agente-cotizaciones.medenezerllc.workers.dev/dashboard)",
+      "Bash(curl -s -u giancarlo:MiClaveSegura2026! https://agente-cotizaciones.medenezerllc.workers.dev/api/leads)",
+      "Bash(curl -s -o /dev/null -w 'HTTP %{http_code}\\\\n' https://agente-cotizaciones.medenezerllc.workers.dev/api/leads)",
+      "Bash(curl -s -o /dev/null -w 'HTTP %{http_code}\\\\n' https://agente-cotizaciones.medenezerllc.workers.dev/propuesta?id=4)",
+      "Bash(curl -s -o /dev/null -w 'HTTP %{http_code}\\\\n' https://agente-cotizaciones.medenezerllc.workers.dev/dashboard.html)",
+      "Bash(curl -s -o /dev/null -w 'HTTP %{http_code}\\\\n' -u giancarlo:MiClaveSegura2026! __TRACKED_VAR__/dashboard)",
+      "Bash(curl -s -o /dev/null -w 'HTTP %{http_code}\\\\n' __TRACKED_VAR__/dashboard)",
+      "Bash(curl -s -D - -o /dev/null -u giancarlo:MiClaveSegura2026! https://agente-cotizaciones.medenezerllc.workers.dev/dashboard)",
+      "Bash(curl -s -X POST https://agente-cotizaciones.medenezerllc.workers.dev/api/submit -H 'Content-Type: application/json' -d '{ *)",
+      "Bash(nslookup -type=MX send.medenezerpos.com 8.8.8.8)",
+      "Bash(nslookup -type=TXT send.medenezerpos.com 8.8.8.8)",
+      "Bash(nslookup -type=TXT resend._domainkey.medenezerpos.com 8.8.8.8)",
+      "Bash(echo \"=== 1\\) ¿El SKILL está instalado localmente? ===\" *)",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(brew --version)",
+      "Bash(echo \"✅ brew: $\\(brew --version)",
+      "Bash(git config *)",
+      "Bash(sw_vers -productVersion)",
+      "Bash(echo \"macOS: $\\(sw_vers -productVersion 2>/dev/null\\)\")"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  // Config de tu agente en Cloudflare.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "agente-cotizaciones",
+  "main": "src/index.js",
+  "compatibility_date": "2025-05-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // El formulario y el dashboard (archivos estáticos) viven en /public
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+
+  // Browser Rendering: genera el PDF de la propuesta en producción.
+  // Nota: requiere el plan Workers Paid ($5/mes) al momento de publicar.
+  "browser": {
+    "binding": "BROWSER"
+  },
+
+  // Configs NO secretas (las secretas van con `wrangler secret put`)
+  "vars": {
+    // Modelo de OpenAI. gpt-4o-mini = barato y suficiente.
+    "OPENAI_MODEL": "gpt-4o-mini",
+    // A qué correo llegan las propuestas (el tuyo).
+    // Mientras Resend esté en modo prueba, debe ser el correo de tu cuenta Resend.
+    // Al verificar tu dominio podrás cambiarlo a cualquier dirección.
+    "OWNER_EMAIL": "medenezerllc@gmail.com",
+    "OWNER_NAME": "Giancarlo Medina",
+    // Dirección emisora (dominio verificado en Resend)
+    "MAIL_FROM": "Electronic Payments <no-reply@medenezerpos.com>"
+  }
+}
